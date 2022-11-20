@@ -4,7 +4,8 @@
   "description": "",
   "main": "demo.js",
   "scripts": {
-    "start": "ts-node main.ts",
+    "demo1": "ts-node ./demo/intercept/main.ts",
+    "demo2": "ts-node ./demo/reactivity/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

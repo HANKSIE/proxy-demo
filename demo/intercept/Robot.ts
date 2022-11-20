@@ -1,4 +1,5 @@
 import Interceptable from "./Interceptable";
+import Log from "./Log";
 
 export default class Robot extends Interceptable {
   constructor(public id: string) {
@@ -14,10 +15,8 @@ export default class Robot extends Interceptable {
     method: string | Symbol,
     args: any[]
   ): void {
-    console.log(
-      `[${new Date().toLocaleString("zh-TW")}] robot "${
-        robot.id
-      }" action: [${method}] args: [${args.join(",")}]`
+    Log.info(
+      `robot "${robot.id}" action: [${method}] args: [${args.join(",")}]`
     );
   }
 }
